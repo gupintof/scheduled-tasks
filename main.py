@@ -1,3 +1,4 @@
+import os
 #To run and test the code you need to update 4 places:
 # 1. Change MY_EMAIL/MY_PASSWORD to your own details.
 # 2. Go to your email provider and make it allow less secure apps.
@@ -12,8 +13,8 @@ import random
 import smtplib
 
 
-MY_EMAIL = 
-MY_PASSWORD = 
+MY_EMAIL = os.envoron.get("MY_EMAIL")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 today = datetime.now()
 today_tuple = (today.month, today.day)
